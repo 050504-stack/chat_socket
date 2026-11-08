@@ -1,0 +1,530 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   LOGIN
+   ========================= */
+
+.login-body {
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111827,
+            #1f2937,
+            #374151
+        );
+}
+
+
+/* CONTENEDOR */
+
+.login-container {
+
+    width: 100%;
+    max-width: 420px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.35);
+}
+
+
+/* CABECERA */
+
+.login-header {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+
+.logo {
+
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 35px;
+
+    border-radius: 50%;
+
+    background: #111827;
+
+    color: white;
+}
+
+
+.login-header h1 {
+
+    font-size: 28px;
+
+    color: #111827;
+
+    margin-bottom: 8px;
+}
+
+
+.login-header p {
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   PROXIMIDAD
+   ========================= */
+
+.input-group {
+
+    margin-bottom: 22px;
+}
+
+
+.input-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #374151;
+}
+
+
+.input-group input {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+.input-group input:focus {
+
+    border-color: #111827;
+
+    box-shadow:
+        0 0 0 3px rgba(17,24,39,0.1);
+}
+
+
+/* =========================
+   FITTS + SIMILITUD
+   ========================= */
+
+.login-button {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #111827;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.login-button:hover {
+
+    background: #374151;
+
+    transform: scale(1.02);
+}
+
+
+/* PIE */
+
+.login-footer {
+
+    text-align: center;
+
+    margin-top: 30px;
+
+    color: #9ca3af;
+
+    font-size: 12px;
+}
+/* =================================
+   CHAT
+   ================================= */
+
+.chat-body {
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background: #f0f2f5;
+}
+
+
+/* CONTENEDOR */
+
+.chat-container {
+
+    width: 100%;
+    max-width: 550px;
+    height: 650px;
+    max-height: 100vh;
+
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.25);
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =================================
+   LEY DE JAKOB
+   Encabezado familiar
+   ================================= */
+
+.chat-header {
+
+    padding: 20px;
+
+    background: #111827;
+
+    color: white;
+}
+
+
+.chat-header h1 {
+
+    margin-bottom: 5px;
+
+    font-size: 22px;
+}
+
+
+.chat-header span {
+
+    font-size: 13px;
+
+    color: #d1d5db;
+}
+
+
+/* =================================
+   LEY DE PROXIMIDAD
+   Mensajes agrupados
+   ================================= */
+
+.mensajes {
+
+    flex: 1;
+
+    padding: 20px;
+
+    overflow-y: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    background: #f9fafb;
+}
+
+
+/* =================================
+   LEY DE SIMILITUD
+   Todos los mensajes mantienen
+   un estilo visual consistente
+   ================================= */
+
+.mensaje {
+
+    max-width: 75%;
+
+    padding: 12px 15px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 5px rgba(0,0,0,0.08);
+
+    font-size: 14px;
+
+    word-wrap: break-word;
+}
+
+
+/* =================================
+   CAMPO DE MENSAJE
+   ================================= */
+
+.chat-input {
+
+    display: flex;
+
+    gap: 10px;
+
+    padding: 15px;
+
+    border-top: 1px solid #ddd;
+
+    background: white;
+}
+
+
+.chat-input input {
+
+    flex: 1;
+
+    padding: 14px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+
+/* =================================
+   LEY DE FITTS
+   Botón grande
+   ================================= */
+
+.chat-input button {
+
+    min-width: 100px;
+
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #111827;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.chat-input button:hover {
+
+    background: #374151;
+
+    transform: scale(1.03);
+}
+
+/* =================================
+   AVISOS (errores y confirmaciones)
+   ================================= */
+
+.aviso {
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.aviso-error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.aviso-ok {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.enlace {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.enlace a {
+    color: #111827;
+    font-weight: bold;
+}
+
+
+/* =================================
+   CHAT: ENCABEZADO, USUARIOS, MENSAJES
+   ================================= */
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.boton-salir {
+    padding: 10px 16px;
+    border: 1px solid #6b7280;
+    border-radius: 8px;
+    background: transparent;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.boton-salir:hover {
+    background: #374151;
+}
+
+.usuarios-barra {
+    padding: 8px 20px;
+    background: #e5e7eb;
+    color: #374151;
+    font-size: 13px;
+}
+
+.mensaje.propio {
+    align-self: flex-end;
+    background: #dbeafe;
+}
+
+.mensaje-cabecera {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 4px;
+    font-size: 12px;
+    color: #374151;
+}
+
+.mensaje .hora {
+    color: #6b7280;
+}
+
+.mensaje .editado {
+    font-size: 11px;
+    color: #6b7280;
+}
+
+.mensaje .acciones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.mensaje .acciones button {
+    padding: 4px 8px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.mensaje .acciones button:hover {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+
+/* =================================
+   DISEÑO ADAPTABLE (celulares)
+   ================================= */
+
+.login-body,
+.chat-body {
+    padding: 16px;
+}
+
+@media (max-width: 600px) {
+
+    .login-container {
+        padding: 28px 22px;
+    }
+
+    .chat-body {
+        padding: 0;
+    }
+
+    .chat-container {
+        height: 100vh;
+        height: 100dvh;
+        border-radius: 0;
+    }
+
+    .mensaje {
+        max-width: 90%;
+    }
+
+    .chat-input button {
+        min-width: 80px;
+        padding: 14px;
+    }
+}

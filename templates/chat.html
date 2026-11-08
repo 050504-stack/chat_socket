@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Socket</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="chat-body" data-usuario="{{ usuario }}">
+
+    <div class="chat-container">
+
+        <!-- ENCABEZADO -->
+        <div class="chat-header">
+
+            <div>
+                <h1>💬 Chat Socket</h1>
+                <span id="estado">Conectando...</span>
+                <span>· {{ usuario }}</span>
+            </div>
+
+            <form method="post" action="{{ url_for('logout') }}">
+                <input type="hidden" name="csrf" value="{{ csrf_token() }}">
+                <button type="submit" class="boton-salir">Salir</button>
+            </form>
+
+        </div>
+
+        <!-- USUARIOS EN LÍNEA -->
+        <div class="usuarios-barra">
+            En línea: <span id="usuarios">-</span>
+        </div>
+
+        <!-- MENSAJES -->
+        <div id="mensajes" class="mensajes"></div>
+
+        <!-- ESCRIBIR MENSAJE -->
+        <form id="formulario" class="chat-input" autocomplete="off">
+            <input type="text" id="mensaje" placeholder="Escribe un mensaje..."
+                   maxlength="500" autocomplete="off">
+            <button type="submit">ENVIAR</button>
+        </form>
+
+    </div>
+
+    <!-- SOCKET.IO -->
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='chat.js') }}"></script>
+
+</body>
+
+</html>
