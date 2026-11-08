@@ -284,4 +284,4 @@ def borrar_mensaje(datos):
 if __name__ == "__main__":
     puerto = int(os.environ.get("PORT", 5000))
     print("Chat Socket iniciado en http://0.0.0.0:%d" % puerto)
-    socketio.run(app, host="0.0.0.0", port=puerto)
+    socketio.run(app, host="0.0.0.0", port=puerto, allow_unsafe_werkzeug=True)
