@@ -194,3 +194,6 @@ datos inválidos y persistencia del historial al reconectar.
   minuto en cargar.
 - Una sola sala de chat. Se podrían agregar salas y mensajes privados.
 - No hay límite de intentos de inicio de sesión ni recuperación de contraseña.
+## Despliegue en Producción
+Aplicación desplegada y funcional en Render:
+https://chat-socket-dilan.onrender.com
